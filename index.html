@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <h1 class="logo">BookStore</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Featured Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-text">
+            <h2>Welcome to Our Online Bookstore</h2>
+            <p>Discover your next great read. Explore our curated collection of fascinating books.</p>
+            <a href="#books" style="text-decoration: none;">
+                <button class="uiverse-btn buy">Explore Books</button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="books" class="container">
+            <br>
+            <h2 class="section-title">Featured Books</h2>
+            <br>
+            <div class="features">
+                
+                <!-- Book 1 -->
+                <article class="card">
+                    <img src="images/got.jpg" alt="Game of Thrones" class="book-img">
+                    <div class="book-info">
+                        <h3>Game of Thrones</h3>
+                        <p class="author">By George R. R. Martin</p>
+                        <p class="description">A sweeping epic of dynastic fantasy, where noble families fight for control of the Iron Throne of Westeros.</p>
+                        <div class="more-content">
+                            <p>Ici le texte secret de Game of Thrones.</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <button class="uiverse-btn" onclick="toggleCard(this)">Read More</button>
+                        <button class="uiverse-btn buy">Buy Now</button>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="card">
+                    <img src="images/hunger_game.jpg" alt="Hunger Games" class="book-img">
+                    <div class="book-info">
+                        <h3>Mockingjay (The Hunger Games)</h3>
+                        <p class="author">By Suzanne Collins</p>
+                        <p class="description">The thrilling conclusion to the trilogy, where Katniss Everdeen leads the ultimate rebellion against the Capitol.</p>
+                        <div class="more-content">
+                            <p>Ici le texte secret de Game of Thrones.</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <button class="uiverse-btn" onclick="toggleCard(this)">Read More</button>
+                        <button class="uiverse-btn buy">Buy Now</button>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="card">
+                    <img src="images/dune.jpg" alt="Dune Cover" class="book-img">
+                    <div class="book-info">
+                        <h3>Dune</h3>
+                        <p class="author">By Frank Herbert</p>
+                        <p class="description">A stunning blend of adventure and mysticism, environmentalism and politics on the desert planet Arrakis.</p>
+                        <div class="more-content">
+                            <p>Ici le texte secret de Game of Thrones.</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <button class="uiverse-btn" onclick="toggleCard(this)">Read More</button>
+                        <button class="uiverse-btn buy">Buy Now</button>
+                    </div>
+                </article>
+
+                <!-- Book 4 -->
+                <article class="card">
+                    <img src="images/the_hobbit.jpg" alt="The Hobbit Cover" class="book-img">
+                    <div class="book-info">
+                        <h3>The Hobbit</h3>
+                        <p class="author">By J.R.R. Tolkien</p>
+                        <p class="description">A timeless classic where Bilbo Baggins is whisked away on an epic quest to reclaim the Lonely Mountain from a dragon.</p>
+                        <div class="more-content">
+                            <p>Ici le texte secret de Game of Thrones.</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <button class="uiverse-btn" onclick="toggleCard(this)">Read More</button>
+                        <button class="uiverse-btn buy">Buy Now</button>
+                    </div>
+                </article>
+
+                <!-- Book 5 -->
+                <article class="card">
+                    <img src="images/the_little_prince.jpg" alt="The Little Prince Cover" class="book-img">
+                    <div class="book-info">
+                        <h3>The Little Prince</h3>
+                        <p class="author">By Antoine de Saint-Exupéry</p>
+                        <p class="description">A beautiful, poetic tale of a pilot stranded in the desert who meets a young prince fallen from a tiny asteroid.</p>
+                        <div class="more-content">
+                            <p>Ici le texte secret de Game of Thrones.</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <button class="uiverse-btn" onclick="toggleCard(this)">Read More</button>
+                        <button class="uiverse-btn buy">Buy Now</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Online Bookstore. All rights reserved.</p>
+        <p id="current-date"></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
