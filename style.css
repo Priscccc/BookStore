@@ -1,0 +1,273 @@
+/* --- General Styles --- */
+:root {
+    --primary-color: #1978a8;   /* Modern Indigo */
+    --accent-color: #f59e0b;    /* Gold / Amber for important buttons */
+    --white: #ffffff;
+    --dark-bg: #0f172a;         /* Deep night blue */
+    --card-bg: rgba(255, 255, 255, 0.05); /* Glass effect for cards */
+    --text-main: #f8fafc;       /* Off-white for text */
+    --text-muted: #94a3b8;      /* Blue-gray for authors */
+    --main-radius: 20px;        /* More rounded borders for a modern look */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main); /* Updated for dark theme */
+    background-color: var(--dark-bg); /* Updated for dark theme */
+}
+
+.logo {
+    color: var(--white); /* Uses the CSS variable so it dynamically switches color */
+    margin: 0;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background: var(--dark-bg);
+    color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Alignment of the new menu --- */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* This space shifts the menu from "Contact" to the left */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin-left: 20px; }
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Hero --- */
+.hero {
+    text-align: center;
+    position: relative;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-bg));
+    color: white;
+}
+
+.hero h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    color: var(--text-muted);
+}
+
+/* --- Book List --- */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 50px auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--card-bg); /* Glass effect */
+    padding: 30px;
+    border-radius: var(--main-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    gap: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Expansion properties (Merged) */
+.card.expanded {
+    align-items: flex-start; /* Prevents the image from jumping to the middle when expanding */
+}
+
+.more-content {
+    display: none; /* Hidden by default */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.card.expanded .more-content {
+    display: block; /* Displays when the expanded class is added */
+}
+
+.book-img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.book-info {
+    flex-grow: 1;
+}
+
+.book-info h3 { 
+    font-size: 1.5rem; 
+    margin-bottom: 5px; 
+    color: var(--white);
+}
+
+.book-info .author {
+    font-style: italic;
+    color: var(--accent-color); /* Using accent color for author */
+    margin-bottom: 15px;
+}
+
+.book-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 180px;
+}
+
+/* --- UIVERSE BUTTON STYLE --- */
+.uiverse-btn {
+    padding: 0.8em 1.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.uiverse-btn:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0px 15px 20px rgba(25, 120, 168, 0.3);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.uiverse-btn.buy:hover {
+    background-color: var(--accent-color); /* Uses Gold color for purchase */
+    box-shadow: 0px 15px 20px rgba(245, 158, 11, 0.4);
+}
+
+.uiverse-btn:active {
+    transform: translateY(-1px);
+}
+
+/* --- Contact & Form --- */
+.contact-card-container {
+    background: var(--card-bg);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    border-radius: var(--main-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-group { margin-bottom: 20px; }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    margin-top: 5px;
+}
+
+footer {
+    background: #0a0f1d;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .card { flex-direction: column; text-align: center; }
+    .book-actions { width: 100%; }
+    .card.expanded { align-items: center; }
+}
+
+/* --- LIGHT MODE --- */
+/* Changing the value of existing variables when the body has the .light-theme class */
+.light-theme {
+    --dark-bg: #fdfbf7; /* Off-white / cream color */
+    --card-bg: #ffffff; /* Completely white cards */
+    --text-main: #1e293b; /* Dark text to make it readable */
+    --text-muted: #475569; /* Dark gray for secondary text */
+    --white: #1e293b; /* Transforms white (titles/logos) into very dark black/blue */
+}
+
+/* Specific adjustments for a perfect light theme */
+.light-theme .navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-theme input, 
+.light-theme textarea {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: var(--text-main);
+}
+
+.light-theme footer {
+    background: #e2e8f0;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the "Hero" header stays pretty even in light mode */
+.light-theme .hero {
+    background: linear-gradient(135deg, var(--primary-color), #cbd5e1);
+}
+.light-theme .hero h2,
+.light-theme .hero p {
+    color: #ffffff; /* Force hero text to white because the background remains colored (Indigo) */
+}
